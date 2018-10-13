@@ -1,0 +1,38 @@
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+<div class="container-fluid">
+  <div class="col-lg-12">
+  <div *ngIf="mostrar">
+    <div class="card-pokemon">
+      <div *ngFor="let item of index">
+      <div><div class="texto">Nombre: </div>{{index.name}}</div>
+      <div><div class="texto">Descripción: </div>{{index.description}}</div>
+      <div *ngFor="let types of index.types; let i = index">
+      <div class="texto">Tipos: </div>{{types}}</div>
+      <div *ngFor="let e of pokemon.evolutions">
+        <div><div class="texto">Nivel: </div>{{e.level}}</div>
+        <div><div class="texto">Método: </div>{{e.method}}</div>
+        <div><div class="texto">Evoluciona a: </div>{{e.to}}</div>
+        <div><div class="texto">ID: </div>{{e._id}}</div>
+    </div>
+  </div>
+  </div>
+  </div>
+  
+  <div *ngIf="!mostrar">
+      <table>
+          <tr>
+            <td>Imagen</td>
+            <td>Name</td>
+            <td>ID</td>
+          </tr>
+          <tr *ngFor="let pokemon of pokemons; let i = index">
+            <td (click)="mostrarDetalles()"><img class="pokemon-image" src="{{pokemon.art_url}}"></td>
+            <td class="pokemon-name">{{pokemon.name}}</td>
+            <td class="pokemon-id">{{pokemon._id}}</td>
+          </tr>
+          </table>
+  </div>
+  </div>
+  </div>
+
+  

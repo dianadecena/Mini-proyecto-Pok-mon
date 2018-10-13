@@ -1,0 +1,43 @@
+table, tr, td {
+    margin: 20px;
+    border: solid 1px #333;
+    border-radius: 9px;
+    padding: 5px;
+    font: 24px Verdana;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+.pokemon-image,
+.pokemon-name,
+.pokemon-id {
+    height: 300px;
+    width: 300px;
+    margin: 20px;
+    border: solid 1px #333;
+    border-radius: 9px;
+    padding: 5px;
+}
+
+.pokemon-image {
+    box-shadow: 2px 3px 6px #333;
+}
+
+.pokemon-name,
+.pokemon-id {
+    border: none;
+    background: linear-gradient(to right, #60ffff, rgb(217, 56, 238));
+}
+
+.card-pokemon {
+    left: 50%;
+    border-radius: 12px;
+    border: solid 1px #333;
+}
+
+.texto {
+    font: 24px Verdana;
+    color: #333;
+    letter-spacing: 1px;
+    text-align: center;
+}
